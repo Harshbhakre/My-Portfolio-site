@@ -231,16 +231,20 @@ body {
   background-size: 80%;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: shine 10s linear infinite;
+  animation: shine 20s linear infinite;
   -webkit-text-fill-color: rgba(255, 255, 255, 0.3);
 }
 @keyframes shine {
   0% {
       background-position: -500% ;
   }
-  100% {
+  50% {
       background-position: 500% ;
   }
+  100% {
+    background-position: -500% ;
+}
+  
 }
 .footer {
   opacity: 0;
