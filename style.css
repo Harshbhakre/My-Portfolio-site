@@ -128,19 +128,8 @@ z-index: -10;
   font-size: 1.5rem;
   font-weight: 50;
 }
-#cursor {
-  animation: cursor 0.4s step-end infinite alternate;
-}
-@keyframes cursor {
-  50% {
-    border-color: transparent;
-  }
-}
-@keyframes typing {
-  form {
-    width: 0;
-  }
-}
+
+
 #div b {
   font-weight: 900;
 }
