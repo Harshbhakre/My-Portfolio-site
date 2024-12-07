@@ -179,3 +179,49 @@ gsap.from(".container1", {
   opacity: 0,
   duration: 0.8,
 });
+document.querySelector('#logoimg1').addEventListener('click',()=>{
+
+  let timeline = gsap.timeline()
+
+  timeline.to('#logoimg1',{
+    y:230,
+    rotate:90,
+    ease: "power4.in",
+    blur:1
+  })
+
+  timeline.to('.container1 h5',{
+    y:20
+  })
+  gsap.to('#logoimg1',{
+    blur:0,
+    y:250,
+    delay:0.5
+  })
+  gsap.to('#logoimg1',{
+    y:230,
+    delay:1
+  })
+  timeline.to('.container1 h5',{
+   
+    y:0
+  })
+  timeline.to('.afterlogoanimation',{
+    opacity:1,
+  })
+ 
+})
+document.querySelector('#logoimg1').addEventListener('mouseover',(dets)=>{
+gsap.to('.logotext',{
+  opacity:1,
+  x:dets.x,
+  y:dets.y
+})
+
+})
+document.querySelector('#logoimg1').addEventListener('mouseout',(dets)=>{
+  gsap.to('.logotext',{
+    opacity:0,
+  })
+  
+  })
