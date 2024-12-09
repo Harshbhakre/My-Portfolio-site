@@ -187,12 +187,18 @@ body {
   width: 100%;
   background: #000;
 }
+.mainContainer-bg{
+  background-image: url("./assets/bg2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120vw;
+}
 .mainContainer {
   min-height: 50vw;
   position: relative;
   margin: 5%;
 }
-.skillcontainer {
+.skillcontainer{
   opacity: 0;
   transition: 0.3s ease-in-out;
   margin: 8%;
