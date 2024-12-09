@@ -8,6 +8,15 @@ document.querySelector("#string").addEventListener("mousemove", (dets) => {
   });
 });
 
+const lenis = new Lenis()
+
+function raf(time){
+lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
 document.querySelector("#string").addEventListener("mouseleave", () => {
   gsap.to("#svg path", {
     attr: { d: finalpath },
@@ -179,49 +188,34 @@ gsap.from(".container1", {
   opacity: 0,
   duration: 0.8,
 });
-document.querySelector('#logoimg1').addEventListener('click',()=>{
 
+document.querySelector('.logoimg').addEventListener('click',()=>{
   let timeline = gsap.timeline()
 
-  timeline.to('#logoimg1',{
-    y:230,
+  timeline.to('.logoimg',{
+    y:395,
     rotate:90,
     ease: "power4.in",
     blur:1
   })
 
   timeline.to('.container1 h5',{
-    y:20
+    y:20,
+    ease: "power4.out"
   })
-  gsap.to('#logoimg1',{
+  gsap.to('.logoimg',{
     blur:0,
-    y:250,
-    delay:0.5
+    y:415,
+    delay:0.5,
+    ease: "power4.out"
   })
-  gsap.to('#logoimg1',{
-    y:230,
+  gsap.to('.logoimg',{
+    y:395,
     delay:1
   })
   timeline.to('.container1 h5',{
    
     y:0
   })
-  timeline.to('.afterlogoanimation',{
-    opacity:1,
-  })
  
 })
-document.querySelector('#logoimg1').addEventListener('mouseover',(dets)=>{
-gsap.to('.logotext',{
-  opacity:1,
-  x:dets.x,
-  y:dets.y
-})
-
-})
-document.querySelector('#logoimg1').addEventListener('mouseout',(dets)=>{
-  gsap.to('.logotext',{
-    opacity:0,
-  })
-  
-  })
